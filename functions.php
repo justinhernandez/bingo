@@ -17,11 +17,11 @@ function rows($list)
 
 		if ($a != 12)
 		{
-			$collection .= "<td>{$list[$a]}</td>";
+			$collection .= "<td class='cell'>{$list[$a]}</td>";
 		}
 		else
 		{
-			$collection .= "<td class='free-space'>FREE</td>";
+			$collection .= "<td class='cell free-space'>FREE</td>";
 		}
 
 		if (($a % $columns) == ($columns - 1))
