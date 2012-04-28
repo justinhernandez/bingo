@@ -1,53 +1,25 @@
 <?php
 
-$words = array(
-	'aggregate',
-	'architect',
-	'brand',
-	'cultivate',
-	'deliver',
-	'deploy',
-	'drive',
-	'engage',
-	'incubate',
-	'integrate',
-	'grow',
-	'evolve',
-	'enable',
-	'markets',
-	'metrics',
-	'networks',
-	'technology',
-	'maximize',
-	'implement',
-	'curate',
-	'cloud',
-	'energize',
-	'motivate',
-	'exploit',
-	'transparency',
-	'actionable',
-	'excite',
-	'repackage',
-	'pivot',
-	'collaborate',
-	'synergy',
-	'leverage',
-	'gamify',
-	'social',
-	'redefine',
-	'innovative',
-	'next gen',
-	'influence',
-	'mvp',
-	'dynamic',
-	'cloud',
-	'sustainable',
-	'green',
-	'energy',
-	'inspiration',
-	'functionality',
-	'robust',
-	'scalability',
-	
-);
+require('words.php');
+
+function rows($list)
+{
+	shuffle($list);
+	$list = array_unique($list);
+	$collection = '';
+	$stop = 25;
+	$columns = 5;
+
+	for ($a=0; $a<$stop; $a++)
+	{
+		if (($a % $columns) == 0)
+			$collection .= '<tr>';
+
+		$collection .= "<td>{$list[$a]}</td>";
+
+		if (($a % $columns) == ($columns - 1))
+			$collection .= '</tr>';
+	}
+
+	return $collection;
+}
