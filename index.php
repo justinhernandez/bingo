@@ -8,6 +8,7 @@ require('functions.php');
 <html>
 <head>
   	<title>Bingo!</title>
+  	<link href="reset.css" media="all" rel="stylesheet" type="text/css" />
   	<link href="style.css" media="all" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
